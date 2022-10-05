@@ -1,6 +1,5 @@
 # Terceiro Trimestre
-
 ## Identificação
-Nicole Fernandes Bastiani - Nr.28
+nome: Mirela Martins Palma N: 25
 
-## Conteúdo - HTML - CSS - JavaScript
+## Conteúdo -HTML-CSS-JavaScript
