@@ -24,13 +24,15 @@ function total(){
       return 
     }
 
-    let r = 0;
+    let m = 0;
     for(let i = 1; i <= t; i++){
-        r = c * (1 + (j/100));
+        m = c * (1 + (j/100));
         document.write("Mês " + i + " valor: " + r +"<br>");
-        c = r;
+        c = m;
     }
-    
+    document.getElementById(Total).innerHTML = m;
+    //document.write("Montante: " + m);
+
     document.write("Resultado: " + r);
 }
 function adicao(){
