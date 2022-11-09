@@ -47,3 +47,12 @@
     background: whitesmoke;
     color: rgb(20, 20, 128);
 }
+.calcF {
+    display: none;
+}
+#input-calcFin {
+    display: none;
+}
+#input-calcFin:checked + .calc .calcF {
+display: block;
+}
