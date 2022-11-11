@@ -1,40 +1,39 @@
-function moeda(atual){
-  return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+function moeda (atual)  {
+return atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 }
 function total(){
-    let c = document.getElementById("valor").value;
+    let c = document.getElementById("capital").value;
     let j = document.getElementById("juros").value;
     let t = document.getElementById("meses").value;
     if(!Number(c)){
       alert("O valor do capital deve ser um número.");
-      document.getElementById("valor").value = "";
-      document.getElementById("valor").focus();
+      document.getElementById("capital").value = "";
+      document.getElementById("capital").focus();
       return
     }
     if(!Number(j)){
-      alert("O valor do juros deve ser um número.");
+      alert("O valor dos juros deve ser um número.");
       document.getElementById("juros").value = "";
       document.getElementById("juros").focus();
       return
     }
     if(!Number(t)){
-      alert("O valor do meses deve ser um número.");
+      alert("A quantidade de meses deve ser um número.");
       document.getElementById("meses").value = "";
       document.getElementById("meses").focus();
       return
     }
-    let m = 0;
-    let texto = " ";
+    let r = 0;
+    let texto = "";
     for(let i = 1; i <= t; i++){
         m = c * (1 + (j/100));
-        texto += i + " : " + moeda(m) + "<br>"
-        //document.write("Mês " + i + " = " + m + "<br>");
+        texto += i + ": " + moeda(m) + "<br>";
+        //document.write("Mês " + i + " valor: " + r +"<br>");
         c = m;
-  }
-
-  document.getElementById("ListaMes").innerHTML = texto;
-  document.getElementById("total").innerHTML = moeda(m);
-  //document.write("Montante: " + m);
+    }
+    document.getElementById("listaMes").innerHTML = texto;
+    document.getElementById("total").innerHTML = moeda (m);
+    //document.write("Resultado: " + r);
 }
   
   function adicao(){
@@ -70,5 +69,24 @@ function total(){
           let c = 100
           let p = Number(val2)  / Number(c)
           let r = Number(val1) * Number(p);
-          document.getElementById("resultado").innerHTML =r;
+          document.getElementById("resultado").innerHTML = r;
           }
+    
+
+    
+function calculaRaiz(){
+  let a = document.getElementById("a").value;
+  let b = document.getElementById("b").value;
+  let c = document.getElementById("c").value;
+  let delta = (b*b) - (4*a*c);
+  let raiz, x1, x2;
+  if(delta>= 0){
+  raiz = Math.sqrt(delta);
+  x1 = ((-b)+raiz)/(2*a);
+  x2 = ((-b)-raiz)/(2*a);
+  raiz = "x' =" 
+  }else{
+
+}
+  document.getElementById("raiz").innerHTML = delta;
+}
