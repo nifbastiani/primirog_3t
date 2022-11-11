@@ -84,7 +84,7 @@ function calculaRaiz(){
   raiz = Math.sqrt(delta);
   x1 = ((-b)+raiz)/(2*a);
   x2 = ((-b)-raiz)/(2*a);
-  raiz = "x' =" 
+  raiz = "x1="+x1+" x2="+x2;
   }else{
 
 }
